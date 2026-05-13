@@ -1,0 +1,21 @@
+input[type="text"] {
+    padding: .5em;
+    border-radius: 3em;
+}
+button {
+    padding: .5em;
+    display: block;
+}
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    max-width: 300px;
+    /* margin: 0 auto; */
+    align-items: center;
+}

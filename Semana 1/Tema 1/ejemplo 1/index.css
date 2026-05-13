@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    background-color: beige;
+}
+h1 {
+    font-size: 1.5em;
+    color:bisque;
+    background-color: black;
+    padding: .5em;
+    border-bottom: 2px groove gray;
+    margin: 0;
+}
+
+hr {
+    border: 5px rgb(198, 0, 0) solid;
+}
+
+section {
+    padding: 1em;
+    border: 1px solid gray;
+    background-color: white;
+
+}
+
+.con-formulario {
+    padding: 10px;
+    border: blue;
+}
+
+.seccion {
+    max-width: 80%;
+    margin: 15px auto;
+}
