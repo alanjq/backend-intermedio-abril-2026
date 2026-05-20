@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo con fetch</title>
+
+</head>
+
+<body>
+    <section id="productos"></section>
+
+    <script>
+
+        function createProductCard({title, category, description, image}){
+            return `<article>
+                <h1>${title}</h1>
+                <p>${category}</p>
+                <div>
+                    <img src="${image}" height="300" />
+                    <p>${description}</p>
+                </div>
+            </article>`;
+        }
+
+        const URL_API = "https://fakestoreapi.com/products"
+
+        fetch(URL_API)
+        .then((response)=>{
+            console.log("Resultado", response)
+            if(response.ok !== false){
+                return response.json();
+            }
+            throw new Error("La URL es incorrecta")
+        })
+        .then((data)=>{
+            const contenedor = document.querySelector('#productos')
+            let html = ""
+            data.map((producto)=>{
+                html += createProductCard(producto)
+            })
+            contenedor.innerHTML = html
+            
+            console.log("este response está correcto.", data)
+        })
+        .catch((error)=>{
+            console.error("Falló la petición", error)
+        })
+
+    </script>
+</body>
+
+</html>
