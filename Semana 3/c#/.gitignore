@@ -1,0 +1,34 @@
+# Compilación
+bin/
+obj/
+
+# Publicaciones
+publish/
+out/
+
+# Configuración de usuario
+*.user
+*.userosscache
+*.suo
+*.cache
+*.pdb
+
+# Archivos temporales
+*.tmp
+*.log
+*.vspscc
+*.vssscc
+
+# Paquetes NuGet descargados
+packages/
+*.nupkg
+project.lock.json
+
+# Configuración de Visual Studio
+.vs/
+
+# Configuración de Rider / JetBrains
+.idea/
+
+# Configuración de VS Code
+.vscode/
